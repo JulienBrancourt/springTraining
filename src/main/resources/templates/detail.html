@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Détail de l'id</title>
+</head>
+<body>
+<h1>Détail de l'id :</h1>
+
+<div th:if="${personListId != null}">
+    <ul>
+        <li th:each="p : ${personListId}">
+            <span th:text="${p.getName()}"></span>
+            <span th:text="${p.getAge()}"></span>
+            <span th:text="${p.getId()}"></span>
+        </li>
+    </ul>
+</div>
+
+</body>
+</html>
